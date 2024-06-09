@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品購入</title>
+    <link rel="stylesheet" href="Style.css">
+    <link href="https://use.fontawesome.com/releases/v6.5.2/css/all.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="global-menu">
+            <a href="index.html">ホーム</a>
+            <a href="#">ログイン</a>
+            <a href="#">ログアウト</a>
+            <a href="#">
+              <i class="fa-solid fa-cart-shopping"></i>
+          </a>
+        </nav>
+    </header>
+    <main>
+        <h1>ホテル</h1>
+        <div class="search-container">
+          <input type="month" class="search-input" placeholder="年月">
+          <input type="text" class="search-input" placeholder="都市">
+          <button class="search-button" onclick="searchHotels()">検索</button>
+        </div>
+        <div id="result-container">
+            <table id="result-table" class="result-table">
+                <thead>
+                    <tr>
+                      <th>商品コード</th>
+                      <th>ホテル名</th>
+                      <th>年月日</th>
+                      <th>料金</th>
+                    </tr>
+                    <tr>
+                      <td><a href="HotelDetail.html">XXXXXXXXXX</a></td>
+                      <td>XXXXXXXXXX</td>
+                      <td>9999-99-99</td>
+                      <td>9999</td>
+                    </tr>
+                    <tr>
+                      <td><a href="HotelDetail.html">XXXXXXXXXX</a></td>
+                      <td>XXXXXXXXXX</td>
+                      <td>9999-99-99</td>
+                      <td>9999</td>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+            <div class="return">
+              <a href="PurchaseItem.html">戻る</a>
+            </div>
+    </main>
+</body>
+</html>

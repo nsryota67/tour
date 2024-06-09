@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品購入</title>
+    <link rel="stylesheet" href="Style.css">
+    <link href="https://use.fontawesome.com/releases/v6.5.2/css/all.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="global-menu">
+            <a href="index.html">ホーム</a>
+            <a href="#">ログイン</a>
+            <a href="#">ログアウト</a>
+            <a href="#">
+              <i class="fa-solid fa-cart-shopping"></i>
+          </a>
+        </nav>
+    </header>
+    <main>
+        <h1>フライト商品</h1>
+        <div class="search-container">
+          <input type="month" class="search-input" placeholder="運航年月">
+          <input type="text" class="search-input" placeholder="出発空港">
+          <input type="text" class="search-input" placeholder="到着空港">
+          <button class="search-button">検索</button>
+        </div>
+        <div id="result-container">
+            <table id="result-table" class="result-table">
+                <thead>
+                    <tr>
+                      <th>商品コード</th>
+                      <th>便名</th>
+                      <th>運航日</th>
+                      <th>料金</th>
+                    </tr>
+                    <tr>
+                      <td><a href="FlightDetail.html">XXXXXXXXXX</a></td>
+                      <td>XXXXXXXXXX</td>
+                      <td>9999-99-99</td>
+                      <td>9999</td>
+                    </tr>
+                    <tr>
+                      <td><a href="FlightDetail.html">XXXXXXXXXX</a></td>
+                      <td>XXXXXXXXXX</td>
+                      <td>9999-99-99</td>
+                      <td>9999</td>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <div class="return">
+          <a href="PurchaseItem.html">戻る</a>
+        </div>
+    </main>
+</body>
+</html>

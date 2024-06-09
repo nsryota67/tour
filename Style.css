@@ -1,3 +1,4 @@
+/*------------------------------------全画面共通-----------------------------------------*/
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -15,30 +16,13 @@ header {
   display: flex;
   justify-content: center;
   gap: 250px;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 
 .global-menu a {
   text-decoration: none;
   color: black;
   font-size: 16px;
-}
-
-h1 {
-  padding-top: 0px;
-  margin: 0;
-  font-size: 24px;
-  padding-bottom: 50px;
-  z-index: 2;
-  /* うつくし明朝体オールドを指定 */
-  font-family: "うつくし明朝体オールド", "YuMincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", serif;
-}
-
-
-hr {
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 10px 0;
 }
 
 main {
@@ -48,16 +32,62 @@ main {
   margin-top: 50px;
 }
 
+h1 {
+  position: relative;
+  margin: 0;
+  font-size: 24px;
+  padding: 0.25em 1em;
+  z-index: 2;
+  font-size: 30px;
+  border: solid 2px black;
+  border-radius: 3px 0 3px 0;
+  /* うつくし明朝体オールドを指定 */
+  /*font-family: "うつくし明朝体オールド", "YuMincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", serif;*/
+}
+
+h1:before, h1:after {
+  content: '';
+  position: absolute;
+  width:10px;
+  height: 10px;
+  border: solid 2px black;
+  border-radius: 50%;
+}
+
+h1:after {
+  top:-12px;
+  left:-12px;
+}
+
+h1:before {
+  bottom:-12px;
+  right:-12px;
+}
+
+.return {
+  margin-top: 70px;
+  margin-right: 85%;
+  font-size: 20px;
+}
+
+/*------------------------------------トップ画面-----------------------------------------*/
+
+hr {
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 20px 0;
+}
 
 
 .background-image {
   position: absolute;
-  top: 70px; /* ヘッダーの高さに合わせて調整 */
+  top: 58px; /* ヘッダーの高さに合わせて調整 */
   left: 0;
   width: 100%;
-  height: calc(100% - 70px); /* ヘッダーの高さに合わせて調整 */
+  height: calc(100% - 40px); /* ヘッダーの高さに合わせて調整 */
   background: url('ビーチの女性.jpg') no-repeat center center;
   background-size: cover;
+  filter: grayscale(80%);
   opacity: 0.5; /* 透明度を設定 */
   z-index: 0;
 }
@@ -70,21 +100,240 @@ main {
 }
 
 .menu-button {
+  margin-top: 20px;
   width: 200px;
   padding: 10px;
   font-size: 16px;
-  border: 2px solid #a1c4fd;
+  color: #333;
+  font-weight: bold;
+  background: transparent;
+  border: 2px solid #333;
+  border-radius: 6px;
+  position: relative;
+  z-index: 2;
+  transition: .3s;
+}
+
+.menu-button::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: #333;
+  transform-origin: 100% 50%;
+  transform: scaleX(0);
+  transition: transform ease .3s;
+}
+.menu-button:hover {
+  color: #fff;
+}
+.menu-button:hover::before {
+  transform-origin: 0% 50%;
+  transform: scaleX(1);
+}
+
+
+/*------------------------------------商品購入画面-----------------------------------------*/
+
+.purchaseItem-button-container {
+  padding-top: 60px;
+  display: flex;
+  gap: 50px;
+}
+
+.tour-button-tour {
+  width: 150px;
+  height: 200px;
+  padding: 15px;
+  font-size: 16px;
+  border: 2px solid black;
+  background-color: white; /* 背景色を白に設定 */
+  color: black;
+  cursor: pointer;
+  box-shadow: 0 0 8px gray;
+  border-radius: 6px;
+}
+
+.tour-button-flight {
+  width: 150px;
+  height: 200px;
+  padding: 15px;
+  font-size: 16px;
+  border: 2px solid black;
+  background-color: white; /* 背景色を白に設定 */
+  color: black;
+  cursor: pointer;
+  box-shadow: 0 0 8px gray;
+  border-radius: 6px;
+}
+
+.tour-button-hotel {
+  width: 150px;
+  height: 200px;
+  padding: 15px;
+  font-size: 16px;
+  border: 2px solid black;
+  background-color: white; /* 背景色を白に設定 */
+  color: black;
+  cursor: pointer;
+  box-shadow: 0 0 8px gray;
+  border-radius: 6px;
+}
+
+.tour-button-order {
+  width: 150px;
+  height: 200px;
+  padding: 15px;
+  font-size: 16px;
+  border: 2px solid black;
+  background-color: white; /* 背景色を白に設定 */
+  color: black;
+  cursor: pointer;
+  box-shadow: 0 0 8px gray;
+  border-radius: 6px;
+}
+
+.fa-person-walking-luggage {
+  font-size: 5em;
+}
+
+.fa-plane {
+  font-size: 5em;
+}
+
+.fa-hotel {
+  font-size: 5em;
+}
+
+.fa-receipt {
+  font-size: 5em;
+}
+
+.tour-button-tour:hover {
+  background-color: #ffff00; /* ホバー時の背景色を変更 */
+}
+
+.tour-button-flight:hover {
+  background-color: #00ffff;
+}
+
+.tour-button-hotel:hover {
+  background-color: #ff1493;
+}
+
+.tour-button-order:hover {
+  background-color: #00ff00;
+}
+
+
+/*--------------------------------------フライト商品画面---------------------------------------*/
+
+.search-container {
+  padding-top: 50px;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid black;
+}
+
+.search-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 2px solid black;
+  cursor: pointer;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  background: #333;
+  border-radius: 6px;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  transition: .3s;
+}
+
+.search-button::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border: 3px solid #333;
+  border-radius: 6px;
+  box-sizing: border-box;
+  z-index: -1;
+  transform: scale(1.2);
+  opacity: 0;
+  transition: transform ease .3s, opacity .3s;
+}
+.search-button:hover {
+  color: #333;
+  background: transparent;
+}
+.search-button:hover::before {
+  transform: scale(0.0);
+  opacity: 1;
+}
+
+
+.result-table {
+  width: 550px;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.result-table th,
+.result-table td {
+  border: 1px solid #a1c4fd;
+  padding: 10px;
+  text-align: center;
+}
+
+.result-table th {
+  background-color: #f0f8ff;
+}
+
+/*----------------------------------フライト商品・ホテル詳細画面--------------------------------*/
+
+.flight-detail-container{
+  margin-top: 20px;
+}
+.detail-table{
+  width: 500px;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.detail-table th,
+.detail-table td {
+  border: 1px solid #a1c4fd;
+  padding: 10px;
+  text-align: center;
+}
+
+.detail-table th {
+  background-color: #f0f8ff;
+}
+
+.cart-button {
+  margin-top: 40px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 2px solid black;
   background-color: white;
   color: black;
   cursor: pointer;
-  overflow: hidden;
-  opacity: 0.8;
-  z-index: 2;
 }
 
-.menu-button:hover {
+.cart-button:hover {
   background-color: #e6f7ff; /* ホバー時の背景色を変更 */
 }
-
-
-
