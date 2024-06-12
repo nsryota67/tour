@@ -1,3 +1,4 @@
+
 /*------------------------------------全画面共通-----------------------------------------*/
 body {
   font-family: Arial, sans-serif;
@@ -86,11 +87,6 @@ h1:before {
   width: 100%;
   height: 100%;
   background-color: rgb(216, 214, 214);
-  /*background-image: radial-gradient(circle, #4b4a4a 60%, transparent 21%), 
-                    radial-gradient(circle, #4b4a4a 60%, transparent 21%);
-  background-size: 100px 100px;
-  background-position: 0 0, 50px 50px;
-  background-repeat: repeat;*/
   z-index: -1;
 }
 
@@ -100,6 +96,7 @@ hr {
   border-top: 1px solid #ccc;
   margin: 20px 0;
 }
+
 
 
 .background-image {
@@ -112,6 +109,49 @@ hr {
   filter: grayscale(90%);
   opacity: 0.6; /* 透明度を設定 */
   z-index: 0;
+}
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  width: 1200px;
+  height: 1200px; /* background-image と同じ高さに */
+  overflow: hidden;
+  background-color: transparent;
+  z-index: -1; /* background-image の背後に配置 */
+}
+
+.wave::before,
+.wave::after {
+  position: absolute;
+  content: "";
+  width: 200%;
+  height: 200%;
+  background-image: linear-gradient(80deg, #5d5d5d 0%, #ededed 50%, #fff 100%);
+  animation: wave-anime 6s linear infinite;
+}
+
+.wave::before {
+  bottom: -150%;
+  left: -50%;
+  border-radius: 50% 50% / 50% 70%;
+}
+
+.wave::after {
+  bottom: -146%;
+  left: -50%;
+  border-radius: 30% 70% / 30% 50%;
+  opacity: 0.2;
+  animation-delay: 0.4s;
+}
+
+@keyframes wave-anime {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .button-container {
@@ -158,13 +198,16 @@ hr {
 }
 
 .message {
-  margin-top: 9%;
-  margin-left: 62%;
+  margin-top: 5%;
+  margin-left: 55%;
   color: rgb(255, 255, 255);
   font-size: 90px;
   font-family: 'Caveat', cursive;
   z-index: 2;
 }
+
+
+
 
 /*------------------------------------商品購入画面-----------------------------------------*/
 
@@ -175,44 +218,23 @@ hr {
 }
 
 .tour-button-tour {
-  width: 200px;
-  height: 250px;
+  width: 150px;
+  height: 200px;
   padding: 15px;
   font-size: 16px;
   border: 2px solid black;
-  background-color: white; /* 背景色を白に設定 */
+  background-color: white;
   color: black;
   cursor: pointer;
   box-shadow: 0 0 8px gray;
   border-radius: 6px;
 }
 
-.tour-button-tour::before {
-  background: rgba(190,91,70,.6);
-  width: 100%;
-  height: 100%;
-}
-.tour-button-tour::after {
-  color: #fff;
-  content: "ツアー商品";
-  font-size: 22px;
-  font-weight: bold;
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  bottom: 0;
-  right: 0;
-}
- 
-.tour-button-tour:hover::before,
-.tour-button-tour::after {
-  opacity: 1;
-}
+
 
 .tour-button-flight {
-  width: 200px;
-  height: 250px;
+  width: 150px;
+  height: 200px;
   padding: 15px;
   font-size: 16px;
   border: 2px solid black;
@@ -224,8 +246,8 @@ hr {
 }
 
 .tour-button-hotel {
-  width: 200px;
-  height: 250px;
+  width: 150px;
+  height: 200px;
   padding: 15px;
   font-size: 16px;
   border: 2px solid black;
@@ -237,8 +259,8 @@ hr {
 }
 
 .tour-button-order {
-  width: 200px;
-  height: 250px;
+  width: 150px;
+  height: 200px;
   padding: 15px;
   font-size: 16px;
   border: 2px solid black;
@@ -295,6 +317,7 @@ hr {
   padding: 10px;
   font-size: 16px;
   border: 2px solid black;
+  border-radius: 6px;
 }
 
 .search-button {
