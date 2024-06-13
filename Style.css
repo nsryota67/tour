@@ -114,8 +114,8 @@ hr {
 .wave {
   position: absolute;
   bottom: 0;
-  width: 1200px;
-  height: 1200px; /* background-image と同じ高さに */
+  width: 1500px;
+  height: 1500px; /* background-image と同じ高さに */
   overflow: hidden;
   background-color: transparent;
   z-index: -1; /* background-image の背後に配置 */
