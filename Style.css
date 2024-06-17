@@ -405,6 +405,40 @@ hr {
   background-color: #00ff00;
 }
 
+.corner-image {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+}
+
+.corner-image-right {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+}
+
+.corner-image-left {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+}
+
+.top-left {
+  top: 150px; /* ヘッダーの下に配置 */
+  left: 50px;
+  transform: rotate(30deg);
+}
+
+.top-right {
+  top: 110px; 
+  right: 70px;
+}
+
+.top-left2 {
+  top: 110px; /* ヘッダーの下に配置 */
+  left: 80px;
+  transform: rotate(30deg);
+}
 
 /*--------------------------------------フライト商品画面---------------------------------------*/
 
@@ -554,3 +588,13 @@ hr {
   transform: scaleX(1);
 }
 
+.corner-image-top {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+}
+
+.top-right {
+  top: 110px; 
+  right: 200px;
+}
