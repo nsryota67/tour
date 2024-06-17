@@ -424,19 +424,19 @@ hr {
 }
 
 .top-left {
-  top: 150px; /* ヘッダーの下に配置 */
-  left: 80px;
+  top: 130px; /* ヘッダーの下に配置 */
+  left: 90px;
   transform: rotate(30deg);
 }
 
 .top-right {
-  top: 110px; 
+  top: 110px;
   right: 50px;
 }
 
 .top-left2 {
-  top: 110px; /* ヘッダーの下に配置 */
-  left: 110px;
+  top: 90px; /* ヘッダーの下に配置 */
+  left: 120px;
   transform: rotate(30deg);
 }
 
