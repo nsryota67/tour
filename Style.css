@@ -598,3 +598,14 @@ hr {
   top: 110px; 
   right: 200px;
 }
+
+.top-left {
+  top: 410px; /* ヘッダーの下に配置 */
+  left: 90px;
+  transform: rotate(0deg);
+}
+
+.bottom-right {
+  top: 620px;
+  right: 100px;
+}
